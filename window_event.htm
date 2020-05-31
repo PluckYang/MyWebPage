@@ -1,0 +1,11 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+window.onload = function(){	
+	document.getElementById("delBut").addEventListener("click",function(){
+		if (window.confirm("确认要删除吗？")) {
+			window.location = "pass.html" ;	//跳转到指定路径
+		}
+	},false) ;
+}
+</script>
+<button id="delBut">删除邮件</button>

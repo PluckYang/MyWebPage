@@ -1,0 +1,67 @@
+<html>
+<head>
+	<title>JavaScript程序开发</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function () {
+			/*
+			document.getElementById('showBut').addEventListener("click",function(){
+				var instObj = document.all("inst") ;
+				var value = "兴趣为：" ;
+				if (instObj.length == undefined) {
+					if (instObj.checked) {
+					value += instObj.value ;
+					}
+				} else {
+					for (var x = 0 ; x < instObj.length ; x ++)
+					{
+						if (instObj[x].checked) {
+							value += instObj[x].value+"、" ;
+						}
+					}
+				}
+				alert(value) ;
+			},false) ;
+			document.getElementById("selCheck").addEventListener("click",function(){
+				var instObj = document.all("inst") ;
+				if (instObj.length == undefined){	//只有一个元素
+					instObj.checked = this.checked ;
+				} else {
+						for (var x = 0 ; x < instObj.length ; x ++)
+					{
+						//每一个复选框的checked状态跟随当前的selCheck的状态
+						instObj[x].checked = this.checked ;
+					}
+				}
+				
+			},false) ;
+			*/
+			document.getElementById("city").addEventListener("change",function(){
+				alert("当前选项为：" + this.value) ;
+			},false) ;
+		}
+	</script>
+</head>
+<body>
+<form action="">
+		<!--<input type="checkBox" id="selCheck">王维暄的爱好：<br>
+		<input type="checkBox" id="inst" name="inst" value="犯贱">犯贱<br>
+		<input type="checkBox" id="inst" name="inst" value="家春">家春<br>
+		<input type="checkBox" id="inst" name="inst" value="抢小孩棒棒糖">抢小孩棒棒糖<br>
+		<input type="checkBox" id="inst" name="inst" value="偷看三岁孩子洗澡">偷看三岁孩子洗澡<br>
+		<input type="checkBox" id="inst" name="inst" value="猥琐男">猥琐男<br>
+		<input type="checkBox" id="inst" name="inst" value="龌龊宅">龌龊宅<br>
+		<input type="checkBox" id="inst" name="inst" value="不是好人">不是好人<br>-->
+	你来自哪里：
+	<select id="city">
+		<option value="BJ-北京">北京</option>
+		<option value="NJ-南京">南京</option>
+		<option value="TJ-天津">天津</option>
+		<option value="WH-武汉">武汉</option>
+		<option value="WH-威海">威海</option>
+	</select>
+	<!--<input type="button" value="选择" id="showBut">-->
+
+</form>
+</body>
+</html>

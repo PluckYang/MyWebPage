@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript教程</title>
+	<meta charset="utf-8">
+	<script type="text/javascript">
+		window.onload = function(){
+			document.getElementById("msg").addEventListener("keypress",function(){
+				cal() ;
+				//document.getElementById("noteSpan").innerHTML += "keypress<br>" ;
+			},false) ;
+			document.getElementById("msg").addEventListener("keydown",function(){
+				cal() ;
+				//document.getElementById("noteSpan").innerHTML += "keydown<br>" ;
+			},false) ;
+			document.getElementById("msg").addEventListener("keyup",function(){
+				cal() ;
+				//document.getElementById("noteSpan").innerHTML += "keyup<br>" ;
+			},false) ;
+		}
+		function cal() {	//计算输入文字长度
+			var obj = document.getElementById("msg") ;
+			var span = document.getElementById("noteSpan") ;
+			var max = 20 ;	//最多文本字数
+			var cur = obj.value.length	//当前的输入长度
+			if (cur <= max) {
+				span.innerHTML = "还允许输入"+(max-cur)+"个字" ;
+				document.getElementById("subBut").disabled=false ;
+			} else {
+				span.innerHTML = "输入文字过多，超过了<font color='red'>"+(max-cur)+"</font>个字" ;
+				document.getElementById("subBut").disabled=true ;
+			}
+		}
+	</script>
+</head>
+<body>
+<form action="">
+	<div>请输入你对王的评价：<br>
+	<textarea id="msg" cols="30" rows="3"></textarea></div>
+	<div><span id="noteSpan">还允许输入20个字</span></div>
+	<div>
+		<input type="submit" id="subBut" value="提交">
+	</div>
+</form>
+</body>
+</html>
