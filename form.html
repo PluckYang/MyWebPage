@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>JavaScript程序开发</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/form.css">
+	<script type="text/javascript"
+	src="js/form.js">	
+		//在引用.js文档后，本来在script中的语句会不被读取
+		//window.alert("hellow world!");
+		//document.write("nihao");
+		</script>
+</head>
+<body>
+<form action="pass.html" method="post" id="loginForm" >
+	<!-- 在以后的开发过程中，要保证name与id属性内容完全一致，否则会出现怪异问题-->
+	登录邮箱：<input type="text" name="email" id="email"><br>
+	<button type="submit" id="subBut"><h1>登录</h1></button>
+</form>	
+</body>
+</html>
